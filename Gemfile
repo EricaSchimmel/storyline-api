@@ -21,6 +21,9 @@ gem 'dotenv-rails'
 gem 'rails-erd', group: :development
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master', group: :development
 
+gem 'versioncake'
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
