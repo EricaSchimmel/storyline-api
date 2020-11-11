@@ -1,24 +1,58 @@
-# README
+# Storyline API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
+- [Storyline API](#storyline-api)
+  - [Table of Contents](#table-of-contents)
+  - [Technologies](#technologies)
+  - [Installation](#installation)
+  - [Setup](#setup)
+  - [Running Tests](#running-tests)
+  - [Status](#status)
+  - [Contributing](#contributing)
+  - [License](#license)
 
-Things you may want to cover:
+## Technologies
+- [Rails 6](https://github.com/rails/rails)
+- [PostgreSQL](https://github.com/ged/ruby-pg)
+- [Devise](https://github.com/heartcombo/devise) - Authentication
+- [RSpec Rails](https://github.com/rspec/rspec-rails) - Testing Framework
+- [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
 
-* Ruby version
+## Installation 
+To install the API fork or clone this repo.
 
-* System dependencies
+## Setup
+To run the project first migrate the database with the following:
 
-* Configuration
+```bash
+rails db:migrate
+```
 
-* Database creation
+And then start up a local server using:
+```bash
+rails s
+```
 
-* Database initialization
+## Running Tests
 
-* How to run the test suite
+Storyline's API uses [RSpec](https://github.com/rspec/rspec-rails) for testing, and through the [spring-commands-rspec gem](https://github.com/jonleighton/spring-commands-rspec) uses [Spring](https://github.com/rails/spring) to run tests.
 
-* Services (job queues, cache servers, search engines, etc.)
+To run tests:
 
-* Deployment instructions
+- All tests:
+  ```bash
+  bin/rspec
+  ```
+- All tests from a specific directory:
+  ```bash
+  bin/rspec spec/models
+  ```
+- A specific file:
+  ```bash
+    bin/rspec spec/models/user_spec.rb
+  ```
+## Status
 
-* ...
+## Contributing
+
+## License
