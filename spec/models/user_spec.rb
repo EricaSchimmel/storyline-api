@@ -2,59 +2,59 @@ require 'rails_helper'
 require 'faker'
 
 RSpec.describe User, type: :model do
-  before(:all) do 
-    @user1 = create(:user)
+  before(:each) do 
+    @user = build(:user)
   end 
 
   it "is valid with valid attributes" do 
-    expect(@user1).to be_valid 
+    expect(@user).to be_valid 
   end 
 
-  it "is valid with a unique email" do
-    user2 = build(:user, username: Faker::Internet.username)
+  it "is valid with a unique username" do
+    user2 = create(:user, email: Faker::Internet.email, username: Faker::Internet.username)
+    @user.username = user2.username
 
-    expect(user2).to_not be_valid
+    expect(@user).to_not be_valid
   end
 
-  it "is valid with a unique username" do 
-    user2 = build(:user, email: Faker::Internet.email)
+  it "is valid with a unique email" do 
+    user2 = create(:user, email: Faker::Internet.email, username: Faker::Internet.username)
+    @user.email = user2.email
 
-    expect(user2).to_not be_valid
+    expect(@user).to_not be_valid
   end 
 
-  it "is valid with a valid email" do
-    user2 = build(:user, username: Faker::Internet.username, email: "test @example.com")
-
-    expect(user2).to_not be_valid 
+  it "is not valid with a invalid email" do
+    @user.email = "test @example.com"
+    expect(@user).to_not be_valid 
   end 
 
   it "is valid with a valid username" do 
-    user2 = build(:user, email: Faker::Internet.email, username: "test")
+    expect(@user).to be_valid
+  end 
 
-    expect(user2).to_not be_valid
+  it "is not valid with a invalid username" do 
+    @user.username = "a"
+    expect(@user).to_not be_valid 
   end 
 
   it "is not valid when passwords do not match" do 
-    user2 = build(:user, email: Faker::Internet.email, username: Faker::Internet.username, password_confirmation: "sample")
-
-    expect(user2).to_not be_valid
+    @user.password_confirmation = "asdf"
+    expect(@user).to_not be_valid
   end 
 
   it "is not valid without a password" do 
-    user2 = build(:user, email: Faker::Internet.email, username: Faker::Internet.username, password: nil)
-
-    expect(user2).to_not be_valid
+    @user.password = nil
+    expect(@user).to_not be_valid
   end 
 
   it "is not valid without an email" do 
-    user2 = build(:user, username: Faker::Internet.username, email: nil)
-
-    expect(user2).to_not be_valid
+    @user.email = nil
+    expect(@user).to_not be_valid
   end 
 
   it "is not valid without a username" do 
-    user2 = build(:user, email: Faker::Internet.email, username: nil)
-
-    expect(user2).to_not be_valid
+    @user.username = nil
+    expect(@user).to_not be_valid
   end 
 end
