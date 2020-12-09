@@ -1,6 +1,7 @@
 # Storyline API
 
 ## Table of Contents
+
 - [Storyline API](#storyline-api)
   - [Table of Contents](#table-of-contents)
   - [Technologies](#technologies)
@@ -14,17 +15,26 @@
   - [License](#license)
 
 ## Technologies
+
+- Ruby Version 2.6.1
 - [Rails 6](https://github.com/rails/rails)
 - [PostgreSQL](https://github.com/ged/ruby-pg)
 - [Devise](https://github.com/heartcombo/devise) - Authentication
-- [RSpec Rails](https://github.com/rspec/rspec-rails) - Testing Framework
 - [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
 - [Tiddle](https://github.com/adamniedzielski/tiddle) - Token Authentication
+- Testing:
+  - [RSpec Rails](https://github.com/rspec/rspec-rails) - Testing Framework
+  - [Capybara](https://github.com/teamcapybara/capybara)
+  - [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails)
+  - [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner)
+  - [Spring-Commands-Rspec](https://github.com/jonleighton/spring-commands-rspec)
 
-## Installation 
+## Installation
+
 To install the API fork or clone this repo.
 
 ## Setup
+
 To run the project first migrate the database with the following:
 
 ```bash
@@ -32,21 +42,27 @@ rails db:migrate
 ```
 
 And then start up a local server using:
+
 ```bash
 rails s
 ```
-## Usage 
+
+## Usage
+
 To start sending requests to the API locally be sure to have the Rails server running with:
-```bash 
+
+```bash
 rails s
 ```
 
 Once the server is up and running you can begin to send requests to the API on port 3001.
 
-Example request URL: 
+Example request URL:
+
 ```
 http://localhost:3001/api/v1/users/sign_in
 ```
+
 ## Running Tests
 
 Storyline's API uses [RSpec](https://github.com/rspec/rspec-rails) for testing, and through the [spring-commands-rspec gem](https://github.com/jonleighton/spring-commands-rspec) uses [Spring](https://github.com/rails/spring) to run tests.
@@ -65,13 +81,16 @@ To run tests:
   ```bash
     bin/rspec spec/models/user_spec.rb
   ```
+
 ## Status
+
 This API is currently a work in progress and will continue to be updated as time goes on.
 
-  ### To do
-  - Finish setup of [Tiddle](https://github.com/adamniedzielski/tiddle)
-  - Setup [Versioncake](https://github.com/bwillis/versioncake) for versioning
-  - User stories for content
+### To do
+
+- Finish setup of [Tiddle](https://github.com/adamniedzielski/tiddle)
+- Setup [Versioncake](https://github.com/bwillis/versioncake) for versioning
+- User stories for content
 
 ## Contributing
 
