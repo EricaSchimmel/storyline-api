@@ -79,7 +79,7 @@ To run tests:
   ```
 - A specific file:
   ```bash
-    bin/rspec spec/models/user_spec.rb
+  bin/rspec spec/models/user_spec.rb
   ```
 
 ## Status
