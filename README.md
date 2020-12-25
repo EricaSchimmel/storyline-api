@@ -23,10 +23,11 @@
 - [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
 - [Tiddle](https://github.com/adamniedzielski/tiddle) - Token Authentication
 - Testing:
-  - [RSpec Rails](https://github.com/rspec/rspec-rails) - Testing Framework
-  - [Capybara](https://github.com/teamcapybara/capybara)
+  - [RSpec Rails](https://github.com/rspec/rspec-rails)
   - [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails)
   - [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner)
+  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+  - [Faker](https://github.com/faker-ruby/faker)
   - [Spring-Commands-Rspec](https://github.com/jonleighton/spring-commands-rspec)
 
 ## Installation
