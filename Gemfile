@@ -18,11 +18,24 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'dotenv-rails'
 
-gem 'rails-erd', group: :development
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master', group: :development
-
-gem 'versioncake'
+# Authentication
 gem 'devise'
+# gem 'tiddle'
+
+# Searching and Pagination
+# gem 'pagy'
+
+# Json Serializers
+# gem 'oj'
+# gem 'oj_mimic_json'
+# gem 'multi_json'
+
+# Versioning 
+gem 'versioncake'
+
+# Production Debug
+# gem 'lograge'
+# gem 'pghero'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -36,11 +49,15 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'database_cleaner-active_record'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
+
+group :test do 
+  gem 'shoulda-matchers', '~> 4.0'
+end 
 
 group :development do
   gem 'listen', '~> 3.2'
@@ -48,6 +65,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
+  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
