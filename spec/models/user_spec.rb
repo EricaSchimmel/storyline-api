@@ -1,59 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before(:each) do 
-    @user = build(:user)
-  end 
+  subject { build(:user) }
 
   it "is valid with valid attributes" do 
-    expect(@user).to be_valid 
-  end 
-
-  it "is valid with a unique username" do
-    user2 = create(:user, email: Faker::Internet.email, username: Faker::Internet.username)
-    @user.username = user2.username
-
-    expect(@user).to_not be_valid
+    expect(subject).to be_valid
   end
 
-  it "is valid with a unique email" do 
-    user2 = create(:user, email: Faker::Internet.email, username: Faker::Internet.username)
-    @user.email = user2.email
+  it { should validate_presence_of(:username) }
+  it { should validate_length_of(:username).is_at_least(5).is_at_most(15) }
+  it { should validate_uniqueness_of(:username) }
 
-    expect(@user).to_not be_valid
-  end 
+  it { should validate_presence_of(:email) }
+  it { should validate_uniqueness_of(:email).case_insensitive }
+  it { should allow_value("test_user@example.com").for(:email) }
+  it { should_not allow_value("test user@example.com").for(:email) }
 
-  it "is not valid with a invalid email" do
-    @user.email = "test @example.com"
-    expect(@user).to_not be_valid 
-  end 
-
-  it "is valid with a valid username" do 
-    expect(@user).to be_valid
-  end 
-
-  it "is not valid with a invalid username" do 
-    @user.username = "a"
-    expect(@user).to_not be_valid 
-  end 
-
-  it "is not valid when passwords do not match" do 
-    @user.password_confirmation = "asdf"
-    expect(@user).to_not be_valid
-  end 
-
-  it "is not valid without a password" do 
-    @user.password = nil
-    expect(@user).to_not be_valid
-  end 
-
-  it "is not valid without an email" do 
-    @user.email = nil
-    expect(@user).to_not be_valid
-  end 
-
-  it "is not valid without a username" do 
-    @user.username = nil
-    expect(@user).to_not be_valid
-  end 
+  it { should validate_presence_of(:password) }
+  it { should validate_length_of(:password).is_at_least(6).is_at_most(128) }
+  it { should validate_confirmation_of(:password) }
 end
