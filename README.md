@@ -19,6 +19,7 @@
 - Ruby Version 2.6.6
 - Rails 6
 - [Devise](https://github.com/heartcombo/devise) - Authentication
+- [Dotenv Rails](https://github.com/bkeepers/dotenv)
 - [PostgreSQL](https://github.com/ged/ruby-pg)
 - [Tiddle](https://github.com/adamniedzielski/tiddle) - Token Authentication
 - [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
