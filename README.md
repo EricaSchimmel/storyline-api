@@ -1,5 +1,7 @@
 # Storyline API
 
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
+
 ## Table of Contents
 
 - [Storyline API](#storyline-api)
