@@ -18,16 +18,16 @@
 
 - Ruby Version 2.6.6
 - Rails 6
-- [PostgreSQL](https://github.com/ged/ruby-pg)
 - [Devise](https://github.com/heartcombo/devise) - Authentication
-- [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
+- [PostgreSQL](https://github.com/ged/ruby-pg)
 - [Tiddle](https://github.com/adamniedzielski/tiddle) - Token Authentication
+- [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
 - Testing:
-  - [RSpec Rails](https://github.com/rspec/rspec-rails)
-  - [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails)
   - [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner)
-  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+  - [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails)
   - [Faker](https://github.com/faker-ruby/faker)
+  - [RSpec Rails](https://github.com/rspec/rspec-rails)
+  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
   - [Spring-Commands-Rspec](https://github.com/jonleighton/spring-commands-rspec)
 
 ## Installation
