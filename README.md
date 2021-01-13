@@ -17,7 +17,7 @@
 ## Technologies
 
 - Ruby Version 2.6.6
-- [Rails 6](https://github.com/rails/rails)
+- Rails 6
 - [PostgreSQL](https://github.com/ged/ruby-pg)
 - [Devise](https://github.com/heartcombo/devise) - Authentication
 - [Versioncake](https://github.com/bwillis/versioncake) - API Versioning
