@@ -30,7 +30,7 @@ gem 'devise'
 # gem 'oj_mimic_json'
 # gem 'multi_json'
 
-# Versioning 
+# Versioning
 gem 'versioncake'
 
 # Production Debug
@@ -49,15 +49,17 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+
+  # Testing
   gem 'database_cleaner-active_record'
+  gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'rspec-rails'
 end
 
-group :test do 
+group :test do
   gem 'shoulda-matchers', '~> 4.0'
-end 
+end
 
 group :development do
   gem 'listen', '~> 3.2'
@@ -65,7 +67,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
-  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
